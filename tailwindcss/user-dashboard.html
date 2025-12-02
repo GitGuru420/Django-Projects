@@ -6,12 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50 p-6">
     <div class="max-w-[1280px] mx-auto">
         <!-- header -->
-        <header class="flex items-center justify-between">
+        <header class="flex items-center justify-between mb-8">
             <h1 class="text-3xl font-bold">Dashboard</h1>
             <div class="flex items-center gap-2">
                 <button class="rounded-full hover:bg-gray-100 p-2">
@@ -24,6 +35,83 @@
                 <button class="w-10 h-10 rounded-full bg-blue-500 text-white font-semibold">B</button>
             </div>
         </header>
+
+        <!-- stats grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <!-- total task -->
+            <div class="bg-white rounded-xl p-6 shadow-sm">
+                <h3 class="text-sm text-gray-400 font-semibold mb-3">TOTAL TASK</h3>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-3xl mb-1 font-semibold">3</p>
+                        <p class="text-gray-400">11 last month</p>
+                    </div>
+                    <div class="rounded-full bg-blue-100 p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="size-6 text-blue-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- completed task -->
+            <div class="bg-white rounded-xl p-6 shadow-sm">
+                <h3 class="text-sm text-gray-400 font-semibold mb-3">COMPLETED TASK</h3>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-3xl mb-1 font-semibold">1</p>
+                        <p class="text-gray-400">11 last month</p>
+                    </div>
+                    <div class="rounded-full bg-green-100 p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="size-6 text-green-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- task in progress -->
+            <div class="bg-white rounded-xl p-6 shadow-sm">
+                <h3 class="text-sm text-gray-400 font-semibold mb-3">TASK IN PROGRESS</h3>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-3xl mb-1 font-semibold">1</p>
+                        <p class="text-gray-400">11 last month</p>
+                    </div>
+                    <div class="rounded-full bg-yellow-100 p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="size-6 text-yellow-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- todos -->
+            <div class="bg-white rounded-xl p-6 shadow-sm">
+                <h3 class="text-sm text-gray-400 font-semibold mb-3">TODOS</h3>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-3xl mb-1 font-semibold">1</p>
+                        <p class="text-gray-400">11 last month</p>
+                    </div>
+                    <div class="rounded-full bg-purple-100 p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="size-6 text-purple-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
     </div>
 </body>
 
